@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body class="page__body">
+                <!-- Шапка -->
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип «Седона»">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden>">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="info.html">Информация</a>
+            </li>
+            <li class="site-list__item">
+              <a href="foto-video.html">Фото и Видео</a>
+            </li>
+            <li class="site-list__item">
+              <a href="map.html">Карта штата</a>
+            </li>
+            <li class="site-list__item">
+              <a href="inner.html">Гостиницы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+                                    <!-- Промо -->
+    <main class="catalog-page">
+      <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+      <section class="sedona-foto-video">
+        <div class="sedona-foto-video__wrapper">
+            <h2 class="sedona-foto-video__main-title">Фото и видео</h2>
+            <p class="sedona-foto-video__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </div>
+        <span class="sedona-foto-video__underline underline"></span>   <!-- Линия между блоками -->
+      </section>
+                                    <!-- Раздел фото -->
+      <section class="sedona-foto">
+        <div class="sedona-foto__wrapper">
+          <ul class="sedona-foto__list">
+            <li class="sunset">
+              <img class="sunset-foto" src="img/photo-1-mobile.jpg" alt="Фотография дороги на закате">
+              <h3 class="sunset-foto--header header">Неродные просторы</h3>
+              <cite class="sunset-foto--author">Автор фото: Борис</cite>
+              <span class="sunset-foto--like"><img src="img/like-icon.svg" alt="Иконка лайка"></span>
+              <span class="sunset-foto--counter">1350</span>
+              <span class="sunset-foto__underline underline"></span>   <!-- Линия между блоками -->
+            </li>
+            <li class="cactus">
+              <img class="cactus-foto" src="img/photo-2-mobile.jpg" alt="Фотография цветения кактуса">
+              <h3 class="cactus-foto--header header">Местная растительность</h3>
+              <cite class="cactus-foto--author author">Автор фото: Сергей</cite>
+              <span class="cactus-foto--like like"><img src="img/like-icon.svg" alt="Иконка лайка"></span>
+              <span class="cactus-foto--counter counter">143</span>
+              <span class="cactus-foto__underline underline"></span>   <!-- Линия между блоками -->
+            </li>
+            <li class="road-to-north">
+              <img class="road-to-north-foto" src="img/photo-3-mobile.jpg" alt="Фотография дороги поднимающейся в горы через лес">
+              <h3 class="road-to-north-foto--header header">Дорога на север</h3>
+              <cite class="road-to-north-foto--author autor">Автор фото: Петр</cite>
+              <span class="road-to-north-foto--like like"><img src="img/like-icon.svg" alt="Иконка лайка"></span>
+              <span class="road-to-north-foto--counter counter">96</span>
+              <span class="road-to-north-foto__underline underline"></span>   <!-- Линия между блоками -->
+            </li>
+            <li class="bridge">
+              <img class="bridge-foto" src="img/photo-4-mobile.jpg" alt="Фотография скального моста созданного природой">
+              <h3 class="bridge-foto--header header">Мост дьявола</h3>
+              <cite class="bridge-foto--author autor">Автор фото: Антон</cite>
+              <span class="bridge-foto--like like"><img src="img/like-icon.svg" alt="Иконка лайка"></span>
+              <span class="bridge-foto--counter counter">254</span>
+              <span class="bridge-foto__underline underline"></span>   <!-- Линия между блоками -->
+            </li>
+          </ul>
+        </div>
+      </section>
+                                    <!-- Раздел видео -->
+      <section class="sedona-video">
+        <div class="sedona-video__wrapper">
+          <h3 class="sedona-video--header header">Все еще сомневаетесь?</h3>
+          <p class="sedona-video--description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+
+                                      <!-- Видео контент, как будет реализованно? -->
+          <img class="sedona-video--clip" src="img/video-mobile.jpg" alt="Небольшая презентация городка Седона">
+          <div class="video-slider">
+            <span class="slider--rewind"></span>
+            <span class="slider--line"></span>
+          </div>
+          <div class="video-control">
+            <span class="video--repeat"></span>
+            <span class="video--quality"></span>
+            <span class="video--full-screen"></span>
+          </div>
+        </div>
+      </section>
+                                    <!-- Подвал -->
+      <footer class="page-footer">
+        <div class="page-footer__wrapper">
+          <p class="page-footer__hashtag">#VISITSEDONA</p>
+          <div class="page-footer__social">
+            <ul class="page-footer__social-list">
+              <li class="social-item">
+                <a class="social-button--twitter" href="#"><span class="visually-hidden">Седона в Твиттере</span></a>
+              </li>
+              <li class="social-item">
+                <a class="social-button--facebook" href="#"><span class="visually-hidden">Седона на Фейсбуке</span></a>
+              </li>
+              <li class="social-item">
+                <a class="social-button--youtube" href="#"><span class="visually-hidden">Седона на Ютубе</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-copyright">
+            <span class="page-footer__website">Разработано</span>
+            <a href="https://htmlacademy.ru/intensive/adaptive">
+              <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
