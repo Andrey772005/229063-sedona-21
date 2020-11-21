@@ -6,14 +6,10 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page__body">
+  <body class="page-body">
                 <!-- Шапка -->
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип «Седона»">
-      </a>
+    <header class="page-header-form">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden>">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -30,17 +26,21 @@
             </li>
           </ul>
         </div>
+        <button class="main-nav__toggle" type="button"><img src="img/icon-menu.svg" alt="Иконка меню"></button>
       </nav>
+      <a class="page-header__logo">
+        <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
+      </a>
     </header>
                                     <!-- Промо -->
     <main class="form-page">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-      <section class="sedona-lead">
+      <section class="sedona-lead__form">
         <div class="sedona-lead__wrapper">
-            <p class="sedona-lead__main-title">Оставьте свой отзыв</p>
+            <p class="sedona-lead__main-title sedona-lead__main-title-form">Оставьте свой отзыв</p>
             <p class="sedona-lead__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
-        <span class="sedona-lead__underline underline"></span>   <!-- Линия между блоками -->
+        <span class="sedona-lead__underline--form underline"></span>   <!-- Линия между блоками -->
       </section>
                                     <!-- Раздел "Представьтесь:"  -->
       <section class="introduce-form">
@@ -58,7 +58,7 @@
             <label class="introduce-form__your--name" for="patronymic">Отчество:</label>
             <input class="introduce-form__name--input" type="text" id="patronymic" name="name" placeholder="Отчество">
           </div>
-          <span class="introduce-form__underline underline"></span>   <!-- Линия между блоками -->
+          <span class="introduce-form__underline--form underline"></span>   <!-- Линия между блоками -->
         </div>
       </section>
                                       <!-- Раздел контактная информация -->
@@ -75,7 +75,7 @@
             <input class="contact-form__email--input" type="text" id="email" name="name" placeholder="Введите e-mail">
             <span class="email-icon"><img src="img/mail.svg" alt="Иконка письма"></span>
           </div>
-          <span class="introduce-form__underline underline"></span>   <!-- Линия между блоками -->
+          <span class="introduce-form__underline--form underline"></span>   <!-- Линия между блоками -->
         </div>
       </section>
                                     <!-- Раздел впечатления (impression) -->
@@ -94,7 +94,7 @@
             <input class="impression__difficult--input" type="radio" id="difficult" name="difficult">
             <label class="impression__difficult--label" for="difficult">Затрудняюсь ответить</label>
           </div>
-          <span class="introduce-form__underline underline"></span>   <!-- Линия между блоками -->
+          <span class="introduce-form__underline--form underline"></span>   <!-- Линия между блоками -->
         </div>
       </section>
                                     <!-- Раздел посещенные достопримечательности -->
@@ -117,7 +117,7 @@
             <input class="visited__red-rocks--input" type="checkbox" id="red-rocks" name="mountain">
             <label class="visited__red-rocks--label" for="red-rocks">Красные скалы</label>
           </div>
-          <span class="introduce-form__underline underline"></span>   <!-- Линия между блоками -->
+          <span class="introduce-form__underline--form underline"></span>   <!-- Линия между блоками -->
         </div>
       </section>
                                     <!-- Форма эмоций -->
