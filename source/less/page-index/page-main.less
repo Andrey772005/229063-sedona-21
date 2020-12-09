@@ -51,6 +51,41 @@
   overflow: hidden;
 }
 
+// Заголовки h2
+.title {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+  }
+}
+
+// Reason
+.reason {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+// Description
+.description {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
 .main-nav__list a {
   color: #ffffff;
   text-decoration: none;
@@ -177,8 +212,51 @@
 }
 
 // Основное содержимое
-.sedona-lead {
-  width: auto;
+
+.sedona-lead__main-title {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .carryover {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .carryover {
+    display: none;
+  }
+}
+
+.sedona-lead__description {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
 }
 
 .sedona-lead__wrapper {
@@ -186,23 +264,254 @@
   flex-direction: column;
   width: 285px;
   height: auto;
+  margin: auto;
   align-items: center;
-  outline: #81b3d2;
-  outline-offset: -5px;
 }
+
+
 
 @media (min-width: @tablet-width) {
   .sedona-lead__wrapper {
-    width: 768px;
+    width: 520px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .sedona-lead__wrapper {
-    width: 960px;
+    width: 484px;
     margin: 0 auto;
   }
 }
 
+\\ Преимущество №1
+
+.real-city__wrapper {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin: auto;
+}
+
+.real-city__№1 {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.real-city__description {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  text-align: center;
+  align-items: center;
+  background: #81B3D2;
+  background-repeat: no-repeat;
+  color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    .real-city--carryover {
+      display: none;
+    }
+
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+}
+
+// Жилье Сувениры Еда
+
+.real-city__we-have-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .real-city__burger {
+      order: 2;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .real-city__burger {
+      order: 2;
+    }
+  }
+}
+
+.subtitle {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+  }
+}
+
+// Преимущество №2
+
+.devils-bridge__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.devils-bridge__description {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  text-align: center;
+  align-items: center;
+  background: #81B3D2;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+// Преимущества 3,4,5
+
+.reason-345__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
+  margin-top: 0;
+  text-align: center;
+  align-items: center;
+  background: #eeeeee;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.reason-345--carryover {
+  @media (min-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+// Поиск отеля
+
+.hotel-search__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
+  margin-top: 33px;
+  text-align: center;
+  align-items: center;
+}
+
+.hotel-search__title {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+  }
+}
+
+.hotels-search__description {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.hotel-search__button {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  width: 280px;
+  height: 58px;
+  background: #81B3D2;
+  color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+    height: 58px;
+  }
+}
+
+// Подвал
+
+page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+}
 
