@@ -32,12 +32,9 @@
   outline-offset: -3px;
 }
 
-.page-header {
-  display: flex;
-  flex-direction: column;
-}
 
-    // Заголовок h1
+// Заголовок h1
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -53,7 +50,7 @@
 
 // Заголовки h2
 .title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -69,8 +66,9 @@
 }
 
 // Reason
+
 .reason {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -79,142 +77,17 @@
 
 // Description
 .description {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
 }
 
-.main-nav__list a {
-  color: #ffffff;
-  text-decoration: none;
-
-  @media (min-width: @tablet-width) {
-    color: black;
-  }
-
-  @media (min-width: @desktop-width) {
-    color: black;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav__wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 768px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav__wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 960px;
-    margin: 0 auto;
-  }
-}
-
-.main-nav__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav__list {
-    display: flex;
-    justify-content: space-between;
-    width: 768px;
-    padding: 0 10px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav__list {
-    display: flex;
-    justify-content: space-between;
-    width: 960px;
-    padding: 0 20px;
-  }
-}
-
-.site-list__item {
-  display: flex;
-  justify-content: space-around;
-  height: 55px;
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 40px;
-  align-items: center;
-  text-align: center;
-  color: @white;
-  background: #81b3d2;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-@media (min-width: @tablet-width) {
-  .site-list__item {
-    padding: 16px auto 33px auto;
-    background: #ffffff;
-    box-shadow: none;
-    color: #000000;
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 26px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .site-list__item {
-    padding: 16px auto 33px auto;
-    background: #ffffff;
-    box-shadow: none;
-    color: #000000;
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 26px;
-  }
-}
-
-.site-list__item:last-child{
-  height: 98px;
-  align-items: center;
-  background: #ffffff;
-  box-shadow: none;
-}
-
-.site-list__item:last-child {
-
-  @media (min-width: @tablet-width) {
-    order: 3;
-  }
-
-
-  @media (min-width: @desktop-width) {
-    order: 3;
-  }
-
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav__toggle {
-    display: none;
-  }
-}
-
 // Основное содержимое
 
 .sedona-lead__main-title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -247,7 +120,7 @@
 }
 
 .sedona-lead__description {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -268,8 +141,6 @@
   align-items: center;
 }
 
-
-
 @media (min-width: @tablet-width) {
   .sedona-lead__wrapper {
     width: 520px;
@@ -284,7 +155,7 @@
   }
 }
 
-\\ Преимущество №1
+// Преимущество №1
 
 .real-city__wrapper {
   display: flex;
@@ -318,16 +189,16 @@
   width: auto;
   text-align: center;
   align-items: center;
-  background: #81B3D2;
+  background: #81b3d2;
   background-repeat: no-repeat;
   color: #ffffff;
 
   @media (min-width: @tablet-width) {
     width: auto;
+
     .real-city--carryover {
       display: none;
     }
-
   }
 
   @media (min-width: @desktop-width) {
@@ -364,7 +235,7 @@
 }
 
 .subtitle {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -406,7 +277,7 @@
   width: auto;
   text-align: center;
   align-items: center;
-  background: #81B3D2;
+  background: #81b3d2;
   background-repeat: no-repeat;
   color: #ffffff;
 }
@@ -455,7 +326,7 @@
 }
 
 .hotel-search__title {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -474,7 +345,7 @@
 }
 
 .hotels-search__description {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -487,14 +358,14 @@
 }
 
 .hotel-search__button {
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   width: 280px;
   height: 58px;
-  background: #81B3D2;
+  background: #81b3d2;
   color: #ffffff;
 
   @media (min-width: @tablet-width) {
@@ -505,7 +376,7 @@
 
 // Подвал
 
-page-footer__wrapper {
+.page-footer__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -514,4 +385,3 @@ page-footer__wrapper {
   text-align: center;
   align-items: center;
 }
-
