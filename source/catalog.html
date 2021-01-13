@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
-                            <!-- Шапка -->
-    <header class="page-header-catalog">
-      <a class="page-header__logo">
-        <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип «Седона»">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden>">Открыть меню</span></button>
+                <!-- Шапка -->
+    <header class="page-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
+            <li class="site-list__item page-header__logo">
+              <a class="page-header__logo--link">
+                <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
+              </a>
+            </li>
             <li class="site-list__item">
               <a href="info.html">Информация</a>
             </li>
@@ -37,8 +40,10 @@
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
       <section class="sedona-foto-video">
         <div class="sedona-foto-video__wrapper">
-            <h2 class="sedona-foto-video__main-title">Фото и видео</h2>
-            <p class="sedona-foto-video__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          <div class="sedona-foto-video__promo">
+            <h2 class="sedona-foto-video__main--title">Фото и видео</h2>
+            <p class="sedona-foto-video__main--description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          </div>
         </div>
         <span class="sedona-foto-video__underline underline"></span>   <!-- Линия между блоками -->
       </section>
