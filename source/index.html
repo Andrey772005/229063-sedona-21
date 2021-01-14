@@ -8,31 +8,48 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
-                <!-- Шапка -->
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
-      </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="info.html">Информация</a>
+              <a href="info.html">Главная</a>
             </li>
             <li class="site-list__item">
               <a href="foto-video.html">Фото и Видео</a>
             </li>
             <li class="site-list__item">
-              <a href="map.html">Карта штата</a>
+              <a href="map.html">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="inner.html">Гостиницы</a>
+              <a href="inner.html">Html Academy</a>
             </li>
           </ul>
         </div>
       </nav>
+      <a class="page-header__logo">
+        <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
+      </a>
     </header>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
                   <!-- Промо -->
     <main class="page-main">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
@@ -43,7 +60,6 @@
         </div>
       </section>
                   <!-- Основное содержимое -->
-                  <!-- Далее title reason description subtitle текст одинаковый визуально, нужен ли им модификатор? -->
       <section class="real-city">
         <div class="real-city__wrapper">
           <div class="real-city__№1">
@@ -108,7 +124,6 @@
           </div>
         </div>
       </section>
-
                   <!-- Поиск отеля -->
       <section class="hotel-search">
         <div class="hotel-search__wrapper">
@@ -118,10 +133,8 @@
         </div>
         <img src="img/map-mobile.png" width="320" height="350" alt="Карта Аризоны">
       </section>
-
-                  <!-- Здесь будет карта -->
     </main>
-                  <!-- Подвал -->
+                  <!-- Здесь будет карта -->
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div>
