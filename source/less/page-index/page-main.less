@@ -1,7 +1,7 @@
 // Color
 
-@lightblue: #81B3D2;
-@lightgrey: #EEEEEE;
+@lightblue: #81b3d2;
+@lightgrey: #eeeeee;
 @white: #ffffff;
 
 // Viewports
@@ -24,14 +24,21 @@
   font-family: "PT Sans", sans-serif;
   line-height: 26px;
   text-transform: uppercase;
+  background-color: #ffffff;
 }
 
 .page-body {
   min-height: 100%;
+  margin: 0;
   outline: @outline-red;
   outline-offset: -3px;
-}
 
+  @media (min-width: @desktop-width) {
+    width: 94%;
+    margin: auto;
+    background-color: #e7e5e5;
+  }
+}
 
 // Заголовок h1
 
@@ -49,6 +56,7 @@
 }
 
 // Заголовки h2
+
 .title {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -65,8 +73,180 @@
   }
 }
 
-// Reason
+// Меню
 
+.page-header {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    background-color: #ffffff;
+  }
+}
+
+.page-header__logo {
+  width: 102px;
+  height: 84px;
+  align-self: center;
+  z-index: 2;
+  top: -20px;
+}
+
+.main-nav {
+  position: relative;
+  width: auto;
+  min-height: 55px;
+  background-color: #ffffff;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  z-index: 2;
+  display: block;
+  width: 54px;
+  height: 54px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:active {
+    background-color: #ffffff;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 23px;
+  height: 3px;
+  outline: none;
+  background-color: #81b3d2;
+  box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#81b3d2, 30%);
+  box-shadow:
+    0 8px 0 0 fade(#81b3d2, 30%),
+    0 16px 0 0 fade(#81b3d2, 30%);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .site-list__item {
+  display: block;
+}
+
+.main-nav--nojs .user-list__item {
+  display: block;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+  left: auto;
+  height: 40px;
+  background-color: #81b3d2;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 23px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@lightblue, 30%);
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+
+.site-list {
+  font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+
+.site-list a {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: @lightblue;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+// Промо
+
+// Модификатор абзацев
 .reason {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -75,7 +255,6 @@
   line-height: 21px;
 }
 
-// Description
 .description {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -84,7 +263,9 @@
   line-height: 21px;
 }
 
-// Основное содержимое
+.sedona-lead {
+  background-color: #ffffff;
+}
 
 .sedona-lead__main-title {
   font-family: "PT Sans", sans-serif;
@@ -133,24 +314,20 @@
 }
 
 .sedona-lead__wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 285px;
   height: auto;
   margin: auto;
   align-items: center;
-}
 
-@media (min-width: @tablet-width) {
-  .sedona-lead__wrapper {
-    width: 520px;
+  @media (min-width: @tablet-width) {
+    width: 100%;
     margin: 0 auto;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .sedona-lead__wrapper {
-    width: 484px;
+  @media (min-width: @desktop-width) {
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -158,16 +335,16 @@
 // Преимущество №1
 
 .real-city__wrapper {
+  width: auto;
   display: flex;
   align-items: center;
-  width: auto;
   margin: auto;
 }
 
 .real-city__№1 {
+  width: auto;
   display: flex;
   flex-direction: column;
-  width: auto;
   margin-top: 30px;
 
   @media (min-width: @tablet-width) {
@@ -184,9 +361,9 @@
 }
 
 .real-city__description {
+  width: auto;
   display: flex;
   flex-direction: column;
-  width: auto;
   text-align: center;
   align-items: center;
   background: #81b3d2;
@@ -253,9 +430,9 @@
 // Преимущество №2
 
 .devils-bridge__wrapper {
+  width: auto;
   display: flex;
   flex-direction: column;
-  width: auto;
   margin-top: 30px;
 
   @media (min-width: @tablet-width) {
@@ -272,9 +449,9 @@
 }
 
 .devils-bridge__description {
+  width: auto;
   display: flex;
   flex-direction: column;
-  width: auto;
   text-align: center;
   align-items: center;
   background: #81b3d2;
@@ -285,10 +462,10 @@
 // Преимущества 3,4,5
 
 .reason-345__wrapper {
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: auto;
   margin-top: 0;
   text-align: center;
   align-items: center;
@@ -316,10 +493,10 @@
 // Поиск отеля
 
 .hotel-search__wrapper {
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: auto;
   margin-top: 33px;
   text-align: center;
   align-items: center;
@@ -358,13 +535,13 @@
 }
 
 .hotel-search__button {
+  width: 280px;
+  height: 58px;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  width: 280px;
-  height: 58px;
   background: #81b3d2;
   color: #ffffff;
 
@@ -377,11 +554,30 @@
 // Подвал
 
 .page-footer__wrapper {
+  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: auto;
-  margin-top: 10px;
-  text-align: center;
   align-items: center;
+  text-align: center;
+  outline: @outline-red;
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.page-footer__social-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }
