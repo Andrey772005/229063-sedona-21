@@ -19,13 +19,11 @@
 @outline-yellow: 2px solid yellow;
 
 .page {
-  min-width: 100%;
   height: 100%;
   font-size: 14px;
   font-family: "PT Sans", sans-serif;
   line-height: 26px;
   text-transform: uppercase;
-  background-color: #e7e5e5;
 
   @media (min-width: @desktop-width) {
     background-color: #e7e5e5;
@@ -33,17 +31,17 @@
 }
 
 .page-body {
-  height: 100%;
+  min-height: 100%;
   outline: @outline-red;
   outline-offset: -3px;
 
   @media (min-width: @desktop-width) {
     width: 94%;
-     margin: auto;
+    margin: auto;
   }
 }
 
-.page-header {
+/* .page-header {
   display: flex;
   flex-direction: column;
   background-color: #81b3d2;
@@ -114,7 +112,7 @@
   .site-list {
     width: 1200px;
   }
-}
+} */
 
 // Промо
 
@@ -174,10 +172,6 @@
 
 // Раздел фото
 
-.sedona-foto__list {
-  list-style: none;
-}
-
 .sedona-foto__wrapper {
   width: auto;
   margin: auto;
@@ -191,6 +185,8 @@
 }
 
 .sedona-foto__list {
+  list-style: none;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -241,5 +237,3 @@
     width: 445px;
   }
 }
-
-
