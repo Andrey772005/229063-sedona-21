@@ -14,27 +14,44 @@
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item page-header__logo">
-              <a class="page-header__logo--link">
-                <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="info.html">Информация</a>
+            <li class="site-list__item site-list__item--active">
+              <a href="info.html">Главная</a>
             </li>
             <li class="site-list__item">
               <a href="foto-video.html">Фото и Видео</a>
             </li>
             <li class="site-list__item">
-              <a href="map.html">Карта штата</a>
+              <a href="map.html">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="inner.html">Гостиницы</a>
+              <a href="inner.html">Html Academy</a>
             </li>
           </ul>
         </div>
       </nav>
+        <a class="page-header__logo">
+          <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
+        </a>
+        <img class="page-header--background" src="img/header-form-background.png" width="320" height="158" alt="Фотография горы">
+        <img class="page-header--sedona" src="img/sedona.svg" width="229" height="39">
+        <img class="page-header--triangle" src="img/intro-triangle.svg" width="320" height="57">
     </header>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
                                     <!-- Промо -->
     <main class="catalog-page">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
@@ -52,15 +69,15 @@
         <div class="sedona-foto__wrapper">
           <ul class="sedona-foto__list">
             <li class="sunset">
-              <img class="sunset-foto" src="img/photo-1-mobile.jpg" alt="Фотография дороги на закате">
+              <img class="sunset-foto" src="img/photo-1-mobile.png" width="280" height="280" alt="Фотография дороги на закате">
               <h3 class="sunset-foto--header header">Неродные просторы</h3>
-              <cite class="sunset-foto--author">Автор фото: Борис</cite>
+              <cite class="sunset-foto--author author">Автор фото: Борис</cite>
               <span class="sunset-foto--like"><img src="img/like-icon.svg" alt="Иконка лайка"></span>
-              <span class="sunset-foto--counter">1350</span>
+              <span class="sunset-foto--counter counter">1350</span>
               <span class="sunset-foto__underline underline"></span>   <!-- Линия между блоками -->
             </li>
             <li class="cactus">
-              <img class="cactus-foto" src="img/photo-2-mobile.jpg" alt="Фотография цветения кактуса">
+              <img class="cactus-foto" src="img/photo-2-mobile.png" width="280" height="280" alt="Фотография цветения кактуса">
               <h3 class="cactus-foto--header header">Местная растительность</h3>
               <cite class="cactus-foto--author author">Автор фото: Сергей</cite>
               <span class="cactus-foto--like like"><img src="img/like-icon.svg" alt="Иконка лайка"></span>
@@ -68,17 +85,17 @@
               <span class="cactus-foto__underline underline"></span>   <!-- Линия между блоками -->
             </li>
             <li class="road-to-north">
-              <img class="road-to-north-foto" src="img/photo-3-mobile.jpg" alt="Фотография дороги поднимающейся в горы через лес">
+              <img class="road-to-north-foto" src="img/photo-3-mobile.png" width="280" height="280" alt="Фотография дороги поднимающейся в горы через лес">
               <h3 class="road-to-north-foto--header header">Дорога на север</h3>
-              <cite class="road-to-north-foto--author autor">Автор фото: Петр</cite>
-              <span class="road-to-north-foto--like like"><img src="img/like-icon.svg" alt="Иконка лайка"></span>
+              <cite class="road-to-north-foto--author author">Автор фото: Петр</cite>
+              <span class="road-to-north-foto--like like"><img src="img/like-icon.svg" width="23" height="21" alt="Иконка лайка"></span>
               <span class="road-to-north-foto--counter counter">96</span>
               <span class="road-to-north-foto__underline underline"></span>   <!-- Линия между блоками -->
             </li>
             <li class="bridge">
-              <img class="bridge-foto" src="img/photo-4-mobile.jpg" alt="Фотография скального моста созданного природой">
+              <img class="bridge-foto" src="img/photo-4-mobile.png" width="280" height="280" alt="Фотография скального моста созданного природой">
               <h3 class="bridge-foto--header header">Мост дьявола</h3>
-              <cite class="bridge-foto--author autor">Автор фото: Антон</cite>
+              <cite class="bridge-foto--author author">Автор фото: Антон</cite>
               <span class="bridge-foto--like like"><img src="img/like-icon.svg" alt="Иконка лайка"></span>
               <span class="bridge-foto--counter counter">254</span>
               <span class="bridge-foto__underline underline"></span>   <!-- Линия между блоками -->
@@ -89,8 +106,8 @@
                                     <!-- Раздел видео -->
       <section class="sedona-video">
         <div class="sedona-video__wrapper">
-          <h3 class="sedona-video--header header">Все еще сомневаетесь?</h3>
-          <p class="sedona-video--description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <h3 class="sedona-video--header">Все еще сомневаетесь?</h3>
+          <p class="sedona-video--description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
 
                                       <!-- Видео контент, как будет реализованно? -->
           <img class="sedona-video--clip" src="img/video-mobile.jpg" alt="Небольшая презентация городка Седона">
