@@ -13,7 +13,7 @@
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a href="info.html">Главная</a>
             </li>
             <li class="site-list__item">
@@ -28,9 +28,16 @@
           </ul>
         </div>
       </nav>
-      <a class="page-header__logo">
-        <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
-      </a>
+      <picture>
+        <a class="page-header__logo" href="#">
+          <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип «Седона»">
+        </a>
+      </picture>
+<!--       <picture>
+        <source media="(min-width: 1200px)" srcset="img/header-welcome-desktop.png 1x, img/header-welcome-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/header-welcome-tablet.png 1x, img/header-welcome-tablet@2x.png 2x">
+        <img class="welcome-image" src="img/header-welcome-mobile.png" srcset="img/header-welcome-mobile@2x.png 2x" alt="Фотография красивой горы">
+      </picture> -->
     </header>
 
     <script>
@@ -53,10 +60,13 @@
                   <!-- Промо -->
     <main class="page-main">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+      <section class="sedona-welcome--background"></section>
       <section class="sedona-lead">
         <div class="sedona-lead__wrapper">
-            <p class="sedona-lead__main-title">Седона — небольшой<br class="carryover"> городок в Аризоне,<br class="carryover"> заслуживающий большего!</p>
-            <p class="sedona-lead__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <div class="sedona-lead__description">
+            <p class="sedona-lead__main--title">Седона — небольшой<br class="carryover"> городок в Аризоне,<br class="carryover"> заслуживающий большего!</p>
+            <p class="sedona-lead__main-title--description">Рассмотрим 5 причин, по которым<br class="carryover"> Седона круче, чем гранд каньон!</p>
+          </div>
         </div>
       </section>
                   <!-- Основное содержимое -->
@@ -66,10 +76,14 @@
             <div class="real-city__description">
               <h2 class="real-city__title title">Настоящий городок</h2>
               <p class="real-city__reason-one reason">— №1 —</p>
-              <p class="real-city__description description">Седона — не аттракцион для туристов, там<br class="real-city--carryover"> течёт своя жизнь</p>
+              <p class="real-city--description description">Седона не аттракцион для туристов, там<br class="real-city--carryover">течёт своя жизнь</p>
             </div>
             <div class="real-city__hotel-view">
-              <img src="img/photo-city@1x.png"  alt="Гостиница">
+              <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+                  <img class="hotel-image" src="img/photo-city@1x.jpg" srcset="img/photo-city@2x.jpg 2x" alt="Фотография гостиницы">
+              </picture>
             </div>
           </div>
           <ul class="real-city__we-have-list">
@@ -96,31 +110,33 @@
           <div class="devils-bridge__description">
             <h2 class="devils-bridge__title title">Там есть мост дьявола</h2>
             <p class="devils-bridge__reason-two reason">— №2 —</p>
-            <p class="devils-bridge__description description">Да, по нему можно пройти! Если конечно вы<br class="devils-bridge--carryover"> осмелитесь конечно</p>
+            <p class="devils-bridge--description description">Да, по нему можно пройти! Если вы<br class="devils-bridge--carryover"> осмелитесь конечно</p>
           </div>
           <div class="devils-bridge__foto">
-            <img src="img/photo-bridge@1x.png" width="520" height="260" alt="Мост дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="devils-bridge--image" src="img/photo-bridge@1x.jpg" srcset="img/photo-bridge@2x.jpg 2x" alt="Фотография скалы в форме моста">
+            </picture>
           </div>
         </div>
       </section>
       <section class="reason-345">
         <div class="reason-345__wrapper">
           <div class="small-area">
-            <h2 class="small-area__title title">Небольшая<br class="reason-345--carryover"> площадь</h2>
-            <p class="small-area__reason-three reason">— №3 —</p>
-            <p class="small-area__description description">Все достопримечательности находятся очень близко</p>
-            <span class="small-area__underline underline"></span>   <!-- Линия между блоками -->
+            <h2 class="small-area--title title">Небольшая площадь</h2>
+            <p class="small-area__reason--three reason">— №3 —</p>
+            <p class="small-area--description description">Все интересные места находятся очень близко</p>
           </div>
           <div class="nice-road">
-            <h2 class="nice-road__title title">Красивая<br class="reason-345--carryover"> дорога</h2>
-            <p class="nice-road__reason-four reason">— №4 —</p>
-            <p class="nice-road__description description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-            <span class="nice-road__underline underline"></span>    <!-- Линия между блоками -->
+            <h2 class="nice-road--title title">Красивая дорога</h2>
+            <p class="nice-road__reason--four reason">— №4 —</p>
+            <p class="nice-road--description description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="few-tourists">
-            <h2 class="few-tourists__title title">Мало<br class="reason-345--carryover"> туристов</h2>
-            <p class="few-tourists__reason-five reason">— №5 —</p>
-            <p class="few-tourists__description description">Большинство едет в гранд каньон и толпится там</p>
+            <h2 class="few-tourists--title title">Мало туристов</h2>
+            <p class="few-tourists__reason--five reason">— №5 —</p>
+            <p class="few-tourists--description description">Большинство едет в гранд каньон и толпится там</p>
           </div>
         </div>
       </section>
@@ -131,30 +147,30 @@
           <p class="hotels-search__description description">Укажите предполагаемые даты<br> поездки, и мы покажем вам лучшие<br> предложения гостиниц в Седоне</p>
           <button class="hotel-search__button" type="button">Найти гостиницу</button>
         </div>
-        <img src="img/map-mobile.png" width="320" height="350" alt="Карта Аризоны">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="hotel-search--map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта Аризоны">
+        </picture>
       </section>
     </main>
                   <!-- Здесь будет карта -->
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div>
-          <p class="page-footer__hashtag">#VISITSEDONA</p>
-        </div>
-        <div class="page-footer__social">
-          <ul class="page-footer__social-list">
-            <li class="social-item">
-              <a class="social-button--twitter" href="#"><span class="visually-hidden">Седона в Твиттере</span></a>
-            </li>
-            <li class="social-item">
-              <a class="social-button--facebook" href="#"><span class="visually-hidden">Седона на Фейсбуке</span></a>
-            </li>
-            <li class="social-item">
-              <a class="social-button--youtube" href="#"><span class="visually-hidden">Седона на Ютубе</span></a>
-            </li>
-          </ul>
-        </div>
+        <p class="page-footer--hashtag">#VISITSEDONA</p>
+        <ul class="page-footer__social-list">
+          <li class="social-item">
+            <a class="social-button--twitter" href="#"><span class="visually-hidden">Седона в Твиттере</span></a>
+          </li>
+          <li class="social-item">
+            <a class="social-button--facebook" href="#"><span class="visually-hidden">Седона на Фейсбуке</span></a>
+          </li>
+          <li class="social-item">
+            <a class="social-button--youtube" href="#"><span class="visually-hidden">Седона на Ютубе</span></a>
+          </li>
+        </ul>
         <div class="footer-copyright">
-          <span class="page-footer__website">Разработано</span>
+          <p class="page-footer--website">Разработано</p>
           <a href="https://htmlacademy.ru/intensive/adaptive">
             <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
           </a>
